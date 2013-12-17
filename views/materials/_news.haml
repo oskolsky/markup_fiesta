@@ -1,0 +1,12 @@
+- hash = rand(1000)
+%figure.material.__news
+  %a{href: "/news_show##{hash}", class: "double-hover"}
+    %img{src: "/assets/images/fake/img_0#{rand(1..5)}.jpg", class: "material_img", width: "100%", alt: "В России может появиться бесплатный оператор сотовой связи"}
+  %figcaption.material_caption
+    %i.ico.__64.__news.material_icon.__rotate1
+    %article.material_article
+      %h4.material_t.tx.__center.m-b_1
+        %a{href: "/news_show##{hash}", class: "double-hover"} В&nbsp;России может появиться бесплатный оператор сотовой связи
+      %p.material_date.m-b_1 11 ноября
+      %p Зрители смогут совершить путешествие по&nbsp;самым отдаленным и&nbsp;удивительным уголкам нашей планеты, не&nbsp;выезжая за&nbsp;пределы города.
+    = haml '/views/materials/common/_footer'.to_sym

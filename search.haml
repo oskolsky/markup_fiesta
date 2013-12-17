@@ -1,0 +1,23 @@
+%section.p-t_4.p-b_8{role: "region", "aria-label" => "Feed search"}
+  .ctn
+    %p.tx.__center.__xl.__muted.m-b_4 По запросу «маяк» найдено 2 записи:
+    #feed.feed.grid.m-b_6
+      - 1.upto(2) do
+        .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
+          = haml '/views/materials/_news'.to_sym
+        .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
+          = haml '/views/materials/_places'.to_sym
+        .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
+          = haml '/views/materials/_events'.to_sym
+        .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
+          = haml '/views/materials/_live'.to_sym
+        .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
+          = haml '/views/materials/_landmark'.to_sym
+        .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
+          = haml '/views/materials/_news'.to_sym
+    .tx.__center
+      %a{href: "#", class: "load-more", id: "refresher", rel: "index"}
+        .load-more_btn
+          %img{src: "/assets/images/load-more.svg", width: "48", class: "load-more_img"}
+        .load-more_tx
+          Показать ещё

@@ -1,0 +1,12 @@
+- hash = rand(1000)
+%figure.material.__live
+  %a{href: "/live_show##{hash}", class: "double-hover"}
+    %img{src: "/assets/images/fake/img_0#{rand(1..5)}.jpg", class: "material_img", width: "100%", alt: "Топ маяков Петербурга и Ленинградской области"}
+  %figcaption.material_caption
+    %i.ico.__64.__live.material_icon.__rotate1
+    %article.material_article
+      %h4.material_t.tx.__center.m-b_1
+        %a{href: "/live_show##{hash}", class: "double-hover"} Топ маяков Петербурга и&nbsp;Ленинградской области
+      %p.material_date.m-b_1 4 ноября
+      %p Зрители смогут совершить путешествие по&nbsp;самым отдаленным и&nbsp;удивительным уголкам нашей планеты, не&nbsp;выезжая за&nbsp;пределы города.
+    = haml '/views/materials/common/_footer'.to_sym

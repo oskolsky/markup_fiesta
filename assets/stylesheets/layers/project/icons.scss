@@ -1,0 +1,78 @@
+@mixin size($w, $h) {
+  width:  #{$w}px;
+  height: #{$h}px;
+}
+
+
+
+//****************************************************************************************************
+//
+// .. CUSTOM FONT ICONS
+//
+//****************************************************************************************************
+//
+// .. 16x16
+//
+@font-face {
+  font-family: "icon-16";
+  src: url("/assets/fonts/16x16/16.eot?38178431");
+  src: url("/assets/fonts/16x16/16.eot?38178431#iefix") format("embedded-opentype"),
+       url("/assets/fonts/16x16/16.woff?38178431") format("woff"),
+       url("/assets/fonts/16x16/16.ttf?38178431") format("truetype"),
+       url("/assets/fonts/16x16/16.svg?38178431#16") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+//****************************************************************************************************
+//
+// .. ICONS
+//
+//****************************************************************************************************
+.ico {
+  display: inline-block;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  font-style: normal;
+  vertical-align: top;
+  &.__16 {
+    &::before {
+      font-family: "icon-16";
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &.__arrow:before  {content: "\e800";}
+    &.__clock:before  {content: "\e801";}
+    &.__close:before  {content: "\e802";}
+    &.__direct:before {content: "\e803";}
+    &.__eye:before    {content: "\e804";}
+    &.__search:before {content: "\e805";}
+    &.__share:before  {content: "\e806";}
+    &.__trash:before  {content: "\e807";}
+  }
+  &.__64 {
+    @include size(64, 64);
+    background-image: url(/assets/images/icons/ico-128.png);
+    background-size: cover;
+    &.__news     {background-position: 0 0;}
+    &.__places   {background-position: -64px 0;}
+    &.__events   {background-position: -128px 0;}
+    &.__live     {background-position: -192px 0;}
+    &.__landmark {background-position: -256px 0;}
+  }
+  &.__social {
+    @include size(20, 20);
+    background-image: url(/assets/images/icons/social.svg);
+    background-size: cover;
+    &.__vk {background-position: 0 0;}
+    &.__fb {background-position: -40px 0;}
+    &.__tw {background-position: -80px 0;}
+    &:hover {
+      &.__vk {background-position: -20px 0;}
+      &.__fb {background-position: -60px 0;}
+      &.__tw {background-position: -100px 0;}
+    }
+  }
+}

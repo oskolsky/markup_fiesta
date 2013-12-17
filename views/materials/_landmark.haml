@@ -1,0 +1,16 @@
+- hash = rand(1000)
+%figure.material.__landmark
+  %a{href: "/landmark_show##{hash}", class: "double-hover"}
+    %img{src: "/assets/images/fake/img_0#{rand(1..5)}.jpg", class: "material_img", width: "100%", alt: "Маяк Толбухин"}
+  %figcaption.material_caption
+    %i.ico.__64.__landmark.material_icon.__rotate1
+    %article.material_article
+      %h4.material_t.tx.__center.m-b_1
+        %a{href: "/landmark_show##{hash}", class: "double-hover"} Маяк Толбухин
+      %p.material_date.m-b_1 12 ноября
+      %p.m-b_2 В&nbsp;окрестностях Петербурга и&nbsp;Ленинградской области можно найти несколько впечатляющих маяков с&nbsp;по-настоящему богатой и&nbsp;интересной историей.
+      .material_location
+        %p
+          %i.ico.__16.__direct.tx.__major
+          Кронштадт
+    = haml '/views/materials/common/_footer'.to_sym
