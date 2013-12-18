@@ -1,4 +1,3 @@
-
 $(function() {
   
   $('#navigation').stickyHeader();
@@ -29,9 +28,11 @@ $(function() {
     if ($el.is(':visible')) {
       $el.hide();
       $('.menu-toggle').css({opacity: 1});
+      $(this).find('.ico').removeClass('__close').addClass('__search');
     } else {
       $el.show().focus();
       $('.menu-toggle').css({opacity: 0});
+      $(this).find('.ico').removeClass('__search').addClass('__close');
     }
   });
 
@@ -44,6 +45,26 @@ $(function() {
   //****************************************************************************************************
   $(document).on('mouseenter', '.material', function() {
     $(this).find('.material_icon').toggleClass('__rotate1 __rotate2');
+  });
+
+
+
+  //****************************************************************************************************
+  //
+  // .. Image caption
+  //
+  //****************************************************************************************************
+  $('.article_body').find('img').each(function() {
+    var alt = $(this).attr('alt');
+    if (alt.length > 0) {
+      $(this).wrap(
+        $('<figure/>')
+      ).wrap(
+        $('<div/>').addClass('cnt_img')
+      ).closest('.cnt_img').append(
+        $('<p/>').addClass('cnt_img_alt').text(alt)
+      );
+    }
   });
 
 

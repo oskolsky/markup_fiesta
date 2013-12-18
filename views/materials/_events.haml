@@ -9,5 +9,7 @@
         %a{href: "/events_show##{hash}", class: "double-hover"} Праздничная барахолка в&nbsp;Особняке
       %p.m-b_2 Самая настоящая европейская праздничная барахолка в&nbsp;духе знаменитого Парижского блошиного рынка Les Puces de&nbsp;Saint-Ouen развернется под...
       %p.tx.__center.epsilon.m-b_2 20 декабря — 21 декабря
-      %a{href: "#", class: "form_button form_el __block"} Добавить в календарь
+      .tx.__center
+        %a{href: "#", class: "form_button form_el __block js-add"}
+          Добавить в календарь
     = haml '/views/materials/common/_footer'.to_sym

@@ -18,6 +18,7 @@
         width: 100%;
       }
       .header_search_toggle {
+        color: inherit;
         position: absolute;
         top: 0;
         right: 0;
@@ -47,15 +48,23 @@
   // .. ARTICLES
   //
   //****************************************************************************************************
-  .article_related {
-    > ul li {margin-left: 40px;}
+  .article {
+    padding-right: 20px;
+    padding-left: 20px;
   }
-  .article_share {text-align: center;}
-    .article_share_label {
-      display: block;
-      margin-bottom: 5px;
+    .article_announcement {
+      padding-right: 0px;
+      padding-left: 0px;
     }
-    .article_share_views {margin-top: 5px;}
+    .article_related {
+      > ul li {margin-left: 40px;}
+    }
+    .article_share {text-align: center;}
+      .article_share_label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .article_share_views {margin-top: 5px;}
 
 
 

@@ -33,18 +33,20 @@ input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
   border-radius: $form-el-border-radius;
   color: $form-el-color;
   cursor: pointer;
+  display: inline-block;
   font-size: $form-el-font-size;
-  line-height: $form-el-line-height;
+  line-height: 36px;
+  height: 36px;
   text-align: center;
   text-transform: uppercase;
   @include prefixes(transition, all .33s ease);
   @include prefixes(box-sizing, border-box);
-  &:not([disabled]):hover {background-color: $form-el-border-color; color: #fff;}
   //&:not([disabled]):active { @include linear-gradient(vertical, #ddd, #eee); }
 }
 a.form_button {
   text-decoration: none;
 }
+.no-touch .form_button:not([disabled]):hover {background-color: $form-el-border-color; color: #fff;}
 
 //
 // .. Text

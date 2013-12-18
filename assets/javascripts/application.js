@@ -115,6 +115,7 @@ yepnope([
   '/assets/javascripts/forms.js',
   '/assets/javascripts/components.js',
   '/assets/javascripts/feed.js',
+  '/assets/javascripts/events.js',
   '/assets/javascripts/project.js'
 
 ]);  

@@ -52,20 +52,28 @@
   // .. ARTICLES
   //
   //****************************************************************************************************
-  .article_related {
-    > ul li {margin-left: 60px;}
+  .article {
+    padding-right: 40px;
+    padding-left:  40px;
   }
-  .article_share_label {
-    display: inline-block;
-    margin-right: 15px;
-    width: 80px;
-  }
-  .article_share_views {
-    position: absolute;
-    top: 50%;
-    right: 40px;
-    @include prefixes(transform, translate(0, -50%));
-  }
+    .article_announcement {
+      padding-right: 60px;
+      padding-left: 60px;
+    }
+    .article_related {
+      > ul li {margin-left: 60px;}
+    }
+    .article_share_label {
+      display: inline-block;
+      margin-right: 15px;
+      width: 80px;
+    }
+    .article_share_views {
+      position: absolute;
+      top: 50%;
+      right: 40px;
+      @include prefixes(transform, translate(0, -50%));
+    }
 
 
 

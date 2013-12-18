@@ -23,6 +23,19 @@
   font-weight: normal;
   font-style: normal;
 }
+//
+// .. 40x40
+//
+@font-face {
+  font-family: "icon-40";
+  src: url("/assets/fonts/40x40/40.eot?38178431");
+  src: url("/assets/fonts/40x40/40.eot?38178431#iefix") format("embedded-opentype"),
+  url("/assets/fonts/40x40/40.woff?38178431") format("woff"),
+  url("/assets/fonts/40x40/40.ttf?38178431") format("truetype"),
+  url("/assets/fonts/40x40/40.svg?38178431#16") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 
@@ -51,6 +64,18 @@
     &.__search:before {content: "\e805";}
     &.__share:before  {content: "\e806";}
     &.__trash:before  {content: "\e807";}
+  }
+  &.__40 {
+    &::before {
+      font-family: "icon-40";
+      font-size: 40px;
+      line-height: 40px;
+    }
+    &.__calendar:before {content: "\e800";}
+    &.__clock:before    {content: "\e801";}
+    &.__coin:before     {content: "\e802";}
+    &.__pin:before      {content: "\e803";}
+    &.__purse:before    {content: "\e804";}
   }
   &.__64 {
     @include size(64, 64);

@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6, .alpha, .beta, .gamma, .delta, .epsilon, .zeta {font-fam
   &.__s   {font-size: $tx-s-font-size;}
   &.__m   {font-size: $tx-m-font-size;}
   &.__l   {font-size: $tx-l-font-size;}
-  &.__xl  {font-size: $tx-xl-font-size;}
+  &.__xl  {font-size: $tx-xl-font-size; line-height: 25px;}
   &.__xxl {font-size: $tx-xxl-font-size;}
 
   &.__left   {text-align: left;}

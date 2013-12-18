@@ -13,7 +13,7 @@ $(function() {
       Refresher.startAnimation();
 
       $.ajax({
-        url: "/data/" + $(_this).attr('rel'),
+        url: '/data/' + $(_this).attr('rel'),
         data: {},
         success: function(response) {
           var $moreBlocks = $(response);
