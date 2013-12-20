@@ -100,6 +100,7 @@
 .cnt blockquote {
   padding: #{$content-factor}rem #{$content-factor * 3}rem #{$content-factor * 1.5}rem;
   color: $muted-color;
+  font-size: 17px;
   font-weight: 700;
   line-height: 25px;
   position: relative;

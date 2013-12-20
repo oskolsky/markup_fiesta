@@ -42,6 +42,7 @@
       right: 0;
       left: 0;
       z-index: 1000;
+      opacity: .95;
     }
   }
 
@@ -69,10 +70,10 @@
       width: 80px;
     }
     .article_share_views {
+      @include prefixes(transform, translate(0, -50%));
       position: absolute;
       top: 50%;
       right: 40px;
-      @include prefixes(transform, translate(0, -50%));
     }
 
 
@@ -99,10 +100,10 @@
   //
   //****************************************************************************************************
   .error-block {
+    @include prefixes(transform, translate(-50%, -50%));
     position: absolute;
     top: 50%;
     left: 50%;
-    @include prefixes(transform, translate(-50%, -50%));
   }
 
 }
