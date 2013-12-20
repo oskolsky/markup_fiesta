@@ -449,9 +449,37 @@
 // .. Timeline
 //
 .timeline {
-  padding: 40px;
   background-color: $major-color;
+  text-align: center;
+  padding: 40px 0 35px;
 }
+  .timeline_list {
+    display: inline-block;
+  }
+    .timeline_list_i {
+      display: inline-block;
+      text-align: center;
+      margin: 0 10px;
+      width: 35px;
+      &.__weekend {
+        a {color: #ac990a;}
+      }
+      &.__current {
+        a {color: #fff;}
+      }
+      a {
+        color: inherit;
+        display: block;
+        &:hover {color: #fff;}
+      }
+      span {display: block;}
+    }
+      .timeline_list_date {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 7px;
+      }
+      .timeline_list_day {line-height: 1;}
 
 
 
