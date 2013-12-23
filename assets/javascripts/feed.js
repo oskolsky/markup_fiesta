@@ -29,7 +29,9 @@ $(function() {
 
         },
         error: function() {
-          alert('Error load materials');
+          Refresher.stopAnimation(function() {
+            alert('Error load materials');
+          });
         }
       });
 

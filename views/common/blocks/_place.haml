@@ -1,12 +1,12 @@
 - hash = rand(1000)
 %figure.material.__places
-  %a{href: "/places_show##{hash}", class: "double-hover"}
+  %a{href: "/place_show##{hash}", class: "double-hover"}
     %img{src: "/assets/images/fake/img_0#{rand(1..5)}.jpg", class: "material_img", width: "100%", alt: "Кафе FaCULTet: фастфуд и здоровое питание в одном флаконе"}
   %figcaption.material_caption
     %i.ico.__64.__places.material_icon.__rotate1
     %article.material_article
       %h4.material_t.tx.__center.m-b_1
-        %a{href: "/places_show##{hash}", class: "double-hover"} Кафе FaCULTet: фастфуд и&nbsp;здоровое питание в&nbsp;одном флаконе
+        %a{href: "/place_show##{hash}", class: "double-hover"} Кафе FaCULTet: фастфуд и&nbsp;здоровое питание в&nbsp;одном флаконе
       %p.material_date.m-b_1 16 октября
       %p.m-b_2 В&nbsp;начале осени на&nbsp;Среднем проспекте В.О. появилось местечко, название которого невольно переносит в&nbsp;яркие студенческие годы.
       .material_location
@@ -16,4 +16,4 @@
         %p
           %i.ico.__16.__direct.tx.__major
           Средний проспект В. О., 13/41
-    = haml '/views/materials/common/_footer'.to_sym
+    = haml '/views/common/blocks/_block_footer'.to_sym

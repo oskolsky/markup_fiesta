@@ -1,15 +1,15 @@
 - hash = rand(1000)
 %figure.material.__events
-  %a{href: "/events_show##{hash}", class: "double-hover"}
+  %a{href: "/event_show##{hash}", class: "double-hover"}
     %img{src: "/assets/images/fake/img_0#{rand(1..5)}.jpg", class: "material_img", width: "100%", alt: "Праздничная барахолка в Особняке"}
   %figcaption.material_caption
     %i.ico.__64.__events.material_icon.__rotate1
     %article.material_article
       %h4.material_t.tx.__center.m-b_2
-        %a{href: "/events_show##{hash}", class: "double-hover"} Праздничная барахолка в&nbsp;Особняке
+        %a{href: "/event_show##{hash}", class: "double-hover"} Праздничная барахолка в&nbsp;Особняке
       %p.m-b_2 Самая настоящая европейская праздничная барахолка в&nbsp;духе знаменитого Парижского блошиного рынка Les Puces de&nbsp;Saint-Ouen развернется под...
       %p.tx.__center.epsilon.m-b_2 20 декабря — 21 декабря
       .tx.__center
         %a{href: "#", class: "form_button form_el __block js-add"}
           Добавить в календарь
-    = haml '/views/materials/common/_footer'.to_sym
+    = haml '/views/common/blocks/_block_footer'.to_sym

@@ -4,8 +4,8 @@
       - 1.upto(5) do
         .ctn.slider_i
           .grid
-            = haml '/views/materials/_slide'.to_sym
-            = haml '/views/materials/_slide'.to_sym
+            = haml '/views/common/blocks/_slide'.to_sym
+            = haml '/views/common/blocks/_slide'.to_sym
     .slider_pager
 
 %section.p-t_2.p-b_8{role: "region", "aria-label" => "Feed home"}
@@ -13,17 +13,17 @@
     #feed.feed.grid.m-b_6
       - 1.upto(2) do
         .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
-          = haml '/views/materials/_news'.to_sym
+          = haml '/views/common/blocks/_news'.to_sym
         .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
-          = haml '/views/materials/_places'.to_sym
+          = haml '/views/common/blocks/_place'.to_sym
         .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
-          = haml '/views/materials/_events'.to_sym
+          = haml '/views/common/blocks/_event'.to_sym
         .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
-          = haml '/views/materials/_live'.to_sym
+          = haml '/views/common/blocks/_live'.to_sym
         .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
-          = haml '/views/materials/_landmark'.to_sym
+          = haml '/views/common/blocks/_landmark'.to_sym
         .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
-          = haml '/views/materials/_news'.to_sym
+          = haml '/views/common/blocks/_news'.to_sym
     .tx.__center
       %a{href: "#", class: "load-more", id: "refresher", rel: "index"}
         .load-more_btn
