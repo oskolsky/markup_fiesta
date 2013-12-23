@@ -1,9 +1,19 @@
 %section.p-t_2.p-b_8{role: "region", "aria-label" => "Feed news"}
   .ctn
     #feed.feed.grid.m-b_6
-      - 1.upto(12) do
-        .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__tablet-grid-1-1
+
+      - 1.upto(3) do
+        .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__phone-grid-1-1
           = haml '/views/common/blocks/_news'.to_sym
+
+      -# Banner vertical
+      .feed-i.grid-i.__desktop-grid-1-4.visible-desktop
+        = haml '/views/banners/_banners_vertical'.to_sym
+
+      - 1.upto(10) do
+        .feed-i.grid-i.__desktop-grid-1-4.__tablet-grid-1-2.__phone-grid-1-1
+          = haml '/views/common/blocks/_news'.to_sym
+
     .tx.__center
       %a{href: "#", class: "load-more", id: "refresher", rel: "news"}
         .load-more_btn
