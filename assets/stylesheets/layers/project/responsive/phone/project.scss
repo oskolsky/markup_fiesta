@@ -5,25 +5,19 @@
   // .. HEADER
   //
   //****************************************************************************************************
-  .header {
+  .header_inner {
     padding: 35px 0 30px;
   }
-    .header_search {
+
+    //
+    // .. User block
+    //
+    .user-block {
       position: absolute;
+      top: 50%;
       right: 0;
-      left: 0;
+      @include prefixes(transform, translate(0, -50%));
     }
-      .header_search_input {
-        display: none;
-        width: 100%;
-      }
-      .header_search_toggle {
-        position: absolute;
-        top: 0;
-        right: 0;
-        color: inherit;
-        .ico {vertical-align: middle;}
-      }
 
 
 
@@ -36,10 +30,30 @@
     display: none;
     padding: 35px 0 25px;
   }
-  .menu_i {
-    display: block;
-    &:not(:last-child) {margin-bottom: 10px;}
+    .menu_i {
+      display: block;
+      &:not(:last-child) {margin-bottom: 10px;}
+    }
+
+  //
+  // .. Search
+  //
+  .search {
+    position: absolute;
+    right: 0;
+    left: 0;
   }
+    .search_input {
+      display: none;
+      width: 100%;
+    }
+      .search_toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: inherit;
+        .ico {vertical-align: middle;}
+      }
 
 
 

@@ -23,8 +23,8 @@ $(function() {
   // .. SEARCH TOGGLE ON PHONE
   //
   //****************************************************************************************************
-  $('.header_search_toggle').click(function() {
-    var $el = $(this).parent().find('.header_search_input');
+  $('.search_toggle').click(function() {
+    var $el = $(this).parent().find('.search_input');
     if ($el.is(':visible')) {
       $el.hide();
       $('.menu-toggle').css({opacity: 1});
@@ -34,6 +34,19 @@ $(function() {
       $('.menu-toggle').css({opacity: 0});
       $(this).find('.ico').removeClass('__search').addClass('__close');
     }
+  });
+
+
+
+  //****************************************************************************************************
+  //
+  // .. NAVAGATION LOCATION TOGLE
+  //
+  //****************************************************************************************************
+  $('#navigation').find('.location').click(function() {
+    var $el = $('#navigation').find('.location_dropdown');
+    $el.is(':hidden') ? $el.fadeIn() : $el.fadeOut();
+    return false;
   });
 
 

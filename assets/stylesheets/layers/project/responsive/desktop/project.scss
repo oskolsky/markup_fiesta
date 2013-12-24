@@ -18,16 +18,22 @@
   // .. HEADER
   //
   //****************************************************************************************************
-  .header {
+  .header_inner {
     padding: 30px 0 10px;
   }
-  .header_search {
-    position: relative;
-  }
-  .header_search_input {
-    width: 100%;
-  }
 
+    //
+    // .. User block
+    //
+    .user-block {
+      padding-left: 20px;
+    }
+      .user-block_avatar {
+        margin: 0 10px;
+      }
+      .user-block_a {
+        display: inline-block;
+      }
 
 
   //****************************************************************************************************
@@ -45,6 +51,16 @@
       opacity: .95;
     }
   }
+
+    //
+    // .. Search
+    //
+    .search {
+      position: relative;
+    }
+    .search_input {
+      width: 100%;
+    }
 
 
 

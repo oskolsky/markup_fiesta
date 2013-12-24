@@ -5,15 +5,16 @@
   // .. HEADER
   //
   //****************************************************************************************************
-  .header {
+  .header_inner {
     padding: 30px 0 10px;
   }
-    .header_search {
-      position: relative;
+
+    //
+    // .. User block
+    //
+    .user-block {
+      text-align: right;
     }
-      .header_search_input {
-        width: 60%;
-      }
 
 
 
@@ -25,14 +26,24 @@
   .menu-toggle {
     opacity: 1 !important;
   }
-  .menu {
-    display: none;
-    padding: 35px 0 25px;
+    .menu {
+      display: none;
+      padding: 35px 0 25px;
+    }
+      .menu_i {
+        display: block;
+        &:not(:last-child) {margin-bottom: 10px;}
+      }
+
+  //
+  // .. Search
+  //
+  .search {
+    position: relative;
   }
-  .menu_i {
-    display: block;
-    &:not(:last-child) {margin-bottom: 10px;}
-  }
+    .search_input {
+      width: 60%;
+    }
 
 
 
