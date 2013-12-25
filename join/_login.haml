@@ -1,0 +1,47 @@
+.slides_i
+  %section.join{role: "region", "aria-label" => "Login"}
+    %table
+      %tr
+        %td
+          .ctn
+            .grid-i.__desktop-grid-1-2.b-center
+              .grid
+                .grid-i.__desktop-grid-1-2
+                  .join_side
+                    %h5.tx.__center.m-b_4 Вход с паролем
+                    %form.form
+                      .m-b_2
+                        %input{type: "text", class: "form_text form_el __block", placeholder: "Email"}
+                      .m-b_2
+                        %input{type: "password", class: "form_text form_el __block", placeholder: "Пароль"}
+                      .m-b_2
+                        .cf
+                          .f-l
+                            %label.form_label
+                              %span.form_checkbox.form_el.__fake
+                                %input.form_checkbox.form_el.__real{type: "checkbox"}
+                              &nbsp;Запомнить
+                          .f-r
+                            %a{href: "#", class: "join_recovery"} Забыли пароль?
+                      %div
+                        %input{type: "submit", class: "form_button __black form_el __block", value: "Войти"}
+                .grid-i.__desktop-grid-1-2
+                  .join_side
+                    %h5.tx.__center.m-b_4 Через соцсети
+                    %nav
+                      %ul.join_social
+                        %li.join_social_i
+                          %a{href: "#", class: "join_social_i_a __vk"}
+                            %i.ico.__social.__mini.__vk.va-m{style: "margin-top: -2px;"}
+                            &nbsp;
+                            Вконтакте
+                        %li.join_social_i
+                          %a{href: "#", class: "join_social_i_a __tw"}
+                            %i.ico.__social.__mini.__tw.va-m
+                            &nbsp;
+                            Twitter
+                        %li.join_social_i
+                          %a{href: "#", class: "join_social_i_a __fb"}
+                            %i.ico.__social.__mini.__fb.va-m
+                            &nbsp;
+                            Facebook

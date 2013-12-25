@@ -29,7 +29,7 @@ $(function() {
           alert('Обработчик AJAX запроса для добавления события');
 
           $(_this).removeClass('form_el __block').addClass('__remove').html(
-            $('<i/>').addClass('ico __16 __close')
+            $('<i/>').addClass('ico __16 __trash')
           );
         },
         error: function() {

@@ -53,7 +53,22 @@
   &.__16 {
     &::before {
       font-family: "icon-16";
-      font-size: 16px;
+      font-size: 15px;
+      line-height: 20px;
+    }
+    &.__arrow:before  {content: "\e800";}
+    &.__clock:before  {content: "\e801";}
+    &.__close:before  {content: "\e802";}
+    &.__direct:before {content: "\e803";}
+    &.__eye:before    {content: "\e804";}
+    &.__search:before {content: "\e805";}
+    &.__share:before  {content: "\e806";}
+    &.__trash:before  {content: "\e807";}
+  }
+  &.__22 {
+    &::before {
+      font-family: "icon-22";
+      font-size: 15px;
       line-height: 20px;
     }
     &.__arrow:before  {content: "\e800";}
@@ -98,6 +113,14 @@
       &.__vk {background-position: -20px 0;}
       &.__fb {background-position: -60px 0;}
       &.__tw {background-position: -100px 0;}
+    }
+    &.__mini {
+      @include size(22, 22);
+      background-image: url(/assets/images/icons/social_mini.svg);
+      background-size: cover;
+      &.__vk {background-position: 0 0;}
+      &.__tw {background-position: -22px 0;}
+      &.__fb {background-position: -44px 0;}
     }
   }
 }

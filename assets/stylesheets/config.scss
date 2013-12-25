@@ -118,7 +118,7 @@ $link-style-pseudo: uu; // .. nn / uu / un
 //
 $form-el-bg: #fff;
 $form-el-border-color: $major-color;
-$form-el-border: 1px solid $form-el-border-color;
+$form-el-border: 3px solid transparent;
 $form-el-border-radius: 0;
 $form-el-color: $major-color;
 $form-el-color-required: #f90;
@@ -126,8 +126,8 @@ $form-el-color-valid-true: #008000;
 $form-el-color-valid-false: #f00;
 $form-el-font-size: 11px;
 $form-el-line-height: inherit;
-$form-el-padding: .3rem .6rem;
-$form-btn-padding: 0 9px;
+$form-el-padding: 11px;
+$form-btn-padding: 0 10px;
 
 //
 // .. Content styles

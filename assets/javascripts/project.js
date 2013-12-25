@@ -120,18 +120,27 @@ $(function() {
   // .. SLIDERS
   //
   //****************************************************************************************************
-  $('#cycle-2-slider').cycle({
+  $('.slider.__news').find('.slides').cycle({
     fx: 'scrollHorz',
     centerHorz: true,
     log: false,
     speed: 300,
     swipe: true,
     timeout: 3000,
-    slides: '.slider_i',
+    slides: '.slides_i',
     pager: '.slider_pager',
     pagerTemplate: '<a href="#" class="slider_pager_i"></a>'
   });
 
+  $('.slider.__join').find('.slides').cycle({
+    fx: 'scrollHorz',
+    centerHorz: true,
+    log: false,
+    speed: 300,
+    swipe: true,
+    timeout: 0,
+    slides: '.slides_i'
+  });
 
 
   //****************************************************************************************************

@@ -23,6 +23,15 @@
       }
     }
   }
+  &.__join {
+    background-color: $major-color;
+    height: 100%;
+    min-height: 100%;
+    .main {
+      height: 100%;
+      min-height: 100%;
+    }
+  }
 }
 
 
@@ -49,7 +58,7 @@
   //
   .user-block {
     // .. padding-left: 20px / null / null
-    // .. position: null / null / absolute
+    // .. position: relative / relative / absolute
     // .. text-align: null / right / null
     // .. top: null / null / 50%
     // .. right: null / null / 0
@@ -87,7 +96,7 @@
   // .. Location
   //
   .location {
-
+    position: relative;
   }
     .location_a {
       color: $base-color;
@@ -96,40 +105,6 @@
         top: -1px;
       }
     }
-    .location_dropdown {
-      position: absolute;
-      top: 100%;
-      text-align: center;
-      left: 0;
-      width: 160px;
-      z-index: 1000;
-      &::before {
-        background: url(/assets/images/nipple.png) 0 0 no-repeat;
-        content: '';
-        width: 18px;
-        height: 8px;
-        position: absolute;
-        top: -8px;
-        left: 10px;
-      }
-    }
-      .location_dropdown_i {
-        &:not(:last-child) {border-bottom: 1px solid #333;}
-      }
-        .location_dropdown_i_a {
-          background-color: $base-color;
-          border: 10px solid $base-color;
-          color: #bfbfbf;
-          display: block;
-          font-size: 11px;
-          line-height: 40px;
-          text-transform: uppercase;
-          @include prefixes(transition, all .33s ease);
-          &:hover {
-            background-color: $major-color;
-            color: #fff;
-          }
-        }
 
   //
   // .. Menu toggle
@@ -396,6 +371,67 @@
 
 //****************************************************************************************************
 //
+// .. JOIN
+//
+//****************************************************************************************************
+.join {
+  height: 100%;
+  min-height: 100%;
+  padding: 20px 0;
+  table {
+    width: 100%;
+    height: 100%;
+    td {
+      vertical-align: middle;
+    }
+  }
+}
+  .join_side {
+    &:first-child {padding-right: 20px;}
+    &:last-child  {padding-left: 20px;}
+  }
+
+  //
+  // .. Social
+  //
+  .join_social {
+
+  }
+    .join_social_i {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+      .join_social_i_a {
+        color: #fff;
+        display: block;
+        height: 42px;
+        font-size: 11px;
+        line-height: 42px;
+        text-align: center;
+        text-transform: uppercase;
+        &.__vk {background-color: #45668e;}
+        &.__tw {background-color: #00bef6;}
+        &.__fb {background-color: #3c5a98;}
+        &:hover {color: #fff;}
+      }
+
+  //
+  // .. Recovery password
+  //
+  .join_recovery {
+    color: $base-color;
+    text-decoration: underline;
+    &:hover {
+      color: $base-color;
+      text-decoration: none;
+    }
+  }
+
+
+
+//****************************************************************************************************
+//
 // .. BANNERS
 //
 //****************************************************************************************************
@@ -413,47 +449,64 @@
 //
 //****************************************************************************************************
 .slider {
+  &.__news {
+    .slides {
 
-}
-  .slider_i {
-    margin-right: 2rem;
-  }
-  .slider_pager {
-    padding: 20px 0;
-    text-align: center;
-  }
-    .slider_pager_i {
-      position: relative;
-      display: inline-block;
-      margin: 0 15px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: $base-color;
-      &.cycle-pager-active {
-        background-color: transparent;
-        &::before {
-          @include prefixes(transform, rotate(-360deg));
-          @include prefixes(transition, all 3s ease);
-          background: url(/assets/images/load.png) center no-repeat;
-        }
-      }
-      &::before {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        bottom: -5px;
-        left: -5px;
-        border-radius: 50%;
-        background-color: transparent;
-        content: "";
-      }
-      &:hover {
-        &:not(.cycle-pager-active) {
-          &::before {background-color: $major-color;}
-        }
-      }
     }
+      .slides_i {
+        margin-right: 2rem;
+      }
+    .slider_pager {
+      padding: 20px 0;
+      text-align: center;
+    }
+      .slider_pager_i {
+        position: relative;
+        display: inline-block;
+        margin: 0 15px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $base-color;
+        &.cycle-pager-active {
+          background-color: transparent;
+          &::before {
+            @include prefixes(transform, rotate(-360deg));
+            @include prefixes(transition, all 3s ease);
+            background: url(/assets/images/load.png) center no-repeat;
+          }
+        }
+        &::before {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          bottom: -5px;
+          left: -5px;
+          border-radius: 50%;
+          background-color: transparent;
+          content: "";
+        }
+        &:hover {
+          &:not(.cycle-pager-active) {
+            &::before {background-color: $major-color;}
+          }
+        }
+      }
+  }
+  &.__join {
+    height: 100%;
+    min-height: 100%;
+    .slides {
+      width: 100%;
+      height: 100%;
+    }
+      .slides_i {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+  }
+}
 
 
 
@@ -503,6 +556,53 @@
 // .. ELEMENTS
 //
 //****************************************************************************************************
+//
+// .. Menu dropdown
+//
+.menu_dropdown {
+  display: none;
+
+  position: absolute;
+  text-align: center;
+  width: 160px;
+  z-index: 1000;
+  &::before {
+    background: url(/assets/images/nipple.png) 0 0 no-repeat;
+    content: '';
+    width: 18px;
+    height: 8px;
+    position: absolute;
+    top: -8px;
+  }
+  &.__location {
+    top: 0;
+    left: 0;
+    &::before {left: 10px;}
+  }
+  &.__user {
+    top: calc(100% + 20px);
+    // .. right: 12px / 0 / 0
+    &::before {right: 10px;}
+  }
+}
+  .menu_dropdown_i {
+    &:not(:last-child) {border-bottom: 1px solid #333;}
+  }
+    .menu_dropdown_i_a {
+      background-color: $base-color;
+      border: 10px solid $base-color;
+      color: #bfbfbf;
+      display: block;
+      font-size: 11px;
+      line-height: 40px;
+      text-transform: uppercase;
+      @include prefixes(transition, all .33s ease);
+      &:hover {
+        background-color: $major-color;
+        color: #fff;
+      }
+    }
+
 //
 // .. Load more
 //

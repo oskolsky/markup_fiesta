@@ -1,8 +1,8 @@
 %section.p-t_2{role: "region", "aria-label" => "Feed home"}
-  .slider
-    #cycle-2-slider
+  .slider.__news
+    .slides
       - 1.upto(5) do
-        .ctn.slider_i
+        .slides_i.ctn
           .grid
             = haml '/views/common/blocks/_slide'.to_sym
             = haml '/views/common/blocks/_slide'.to_sym
