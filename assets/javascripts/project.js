@@ -11,6 +11,7 @@ $(function() {
   //
   //****************************************************************************************************
   $('.menu-toggle').click(function() {
+    $('.menu_dropdown.__location').hide();
     $(this).toggleClass('__active');
     $(this).closest('#navigation').find('.menu').slideToggle();
     return false;
@@ -40,12 +41,22 @@ $(function() {
 
   //****************************************************************************************************
   //
-  // .. NAVAGATION LOCATION TOGLE
+  // .. DROPDOWN MENU TOGGLE
   //
   //****************************************************************************************************
-  $('#navigation').find('.location').click(function() {
-    var $el = $('#navigation').find('.location_dropdown');
+  $('.js-toggle-location-menu').click(function() {
+    var $el = $('#navigation').find('.menu_dropdown.__location');
     $el.is(':hidden') ? $el.fadeIn() : $el.fadeOut();
+    $('.menu-toggle').removeClass('__active');
+    $('#navigation').find('.menu').hide();
+    $('.menu_dropdown.__user').hide();
+    return false;
+  });
+
+  $('.js-toggle-user-menu') .click(function() {
+    var $el = $('.user-block').find('.menu_dropdown.__user');
+    $el.is(':hidden') ? $el.fadeIn() : $el.fadeOut();
+    $('.menu_dropdown.__location').hide();
     return false;
   });
 

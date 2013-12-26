@@ -47,6 +47,7 @@
   .header_inner {
     // .. padding: 30px 0 10px / 30px 0 10px / 35px 0 30px
     position: relative;
+    z-index: 9999;
     .grid > .grid-i {vertical-align: middle;}
   }
   .header_logo {
@@ -65,9 +66,12 @@
     // .. null / null / @include prefixes(transform, translate(0, -50%));
   }
     .user-block_avatar {
+      cursor: pointer;
       display: inline-block;
       // .. margin: 0 10px / null / null
+      position: relative;
       vertical-align: middle;
+      img {vertical-align: top;}
     }
     .user-block_a {
       color: inherit;
@@ -96,7 +100,7 @@
   // .. Location
   //
   .location {
-    position: relative;
+
   }
     .location_a {
       color: $base-color;
@@ -613,7 +617,6 @@
 //
 .menu_dropdown {
   display: none;
-
   position: absolute;
   text-align: center;
   width: 160px;
@@ -627,13 +630,13 @@
     top: -8px;
   }
   &.__location {
-    top: 0;
+    top: 100%;
     left: 0;
     &::before {left: 10px;}
   }
   &.__user {
-    top: calc(100% + 20px);
-    // .. right: 12px / 0 / 0
+    top: 50px;
+    right: -5px;
     &::before {right: 10px;}
   }
 }
