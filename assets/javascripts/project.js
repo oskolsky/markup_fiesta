@@ -144,6 +144,21 @@ $(function() {
     autoHeight: 1
   });
 
+  $('.slider.__show').find('.slides').cycle({
+    centerHorz: true,
+    log: false,
+    speed: 300,
+    swipe: true,
+    timeout: 0,
+    slides: '.slides_i',
+    pager: '.slider_pager',
+    pagerTemplate: '<a href="#" class="slider_pager_i"></a>',
+    prev: '.slider_nav_i.__prev',
+    next: '.slider_nav_i.__next',
+    autoHeight: 1
+  });
+
+
 
   //****************************************************************************************************
   //

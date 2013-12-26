@@ -447,6 +447,7 @@
 //
 //****************************************************************************************************
 .slider {
+  position: relative;
   &.__news {
     .slides {
 
@@ -502,6 +503,56 @@
         width: 100%;
         height: 100%;
         position: relative;
+      }
+  }
+  &.__show {
+    .slider_pager {
+      position: absolute;
+      right: 0;
+      bottom: 25px;
+      left: 0;
+      text-align: center;
+      z-index: 999;
+    }
+      .slider_pager_i {
+        display: inline-block;
+        margin: 0 15px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 2px solid transparent;
+        &.cycle-pager-active {
+          background-color: transparent;
+          border-color: #fff;
+        }
+      }
+    .slider_nav {
+
+    }
+      .slider_nav_i {
+        &.__prev, &.__next {
+          background-color: $base-color;
+          color: #fff;
+          cursor: pointer;
+          width: 56px;
+          height: 56px;
+          line-height: 56px;
+          position: absolute;
+          text-align: center;
+          top: 50%;
+          opacity: .5;
+          z-index: 999;
+          @include prefixes(transition, all 3s ease);
+          @include prefixes(transform, translate(0, -50%));
+          &:hover {opacity: 1;}
+        }
+        &.__prev {
+          left: 20px;
+        }
+        &.__next {
+          right: 20px;
+        }
       }
   }
 }

@@ -82,12 +82,12 @@
 //****************************************************************************************************
 .cnt figure, .cnt img,
 .cnt dl, .cnt ol, .cnt ul,
-.cnt p,
 .cnt pre,
 .cnt table {
   &:not(:last-child) {margin-bottom: #{$content-factor}rem;}
   &:first-child {margin-bottom: #{$content-factor * 2}rem;}
 }
+.cnt p {&:not(:last-child) {margin-bottom: #{$content-factor}rem;}}
 
 .cnt h1, .cnt h2, .cnt h3, .cnt h4, .cnt h5, .cnt h6 {
   text-align: center;
