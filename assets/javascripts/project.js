@@ -129,7 +129,8 @@ $(function() {
     timeout: 3000,
     slides: '.slides_i',
     pager: '.slider_pager',
-    pagerTemplate: '<a href="#" class="slider_pager_i"></a>'
+    pagerTemplate: '<a href="#" class="slider_pager_i"></a>',
+    autoHeight: 1
   });
 
   $('.slider.__join').find('.slides').cycle({
@@ -139,7 +140,8 @@ $(function() {
     speed: 300,
     swipe: true,
     timeout: 0,
-    slides: '.slides_i'
+    slides: '.slides_i',
+    autoHeight: 1
   });
 
 
@@ -220,7 +222,11 @@ $(function() {
   // .. LOAD
   //
   //****************************************************************************************************
-  $(window).load(function() {});
+  $(window).load(function() {
+//    var slideH = $('.slider.__news').find('.slides').find('.slides_i').maxHeight();
+//    alert(slideH);
+//    $('.slider.__news').find('.slides').css({height: slideH + 'px'});
+  });
 
 
 
