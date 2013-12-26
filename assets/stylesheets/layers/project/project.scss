@@ -292,6 +292,9 @@
   .article_header {
     text-align: center;
   }
+    .article_header_t {
+      // .. @extend .alpha / .alpha / .beta
+    }
     .article_date {
       color: #bfbfbf;
       font-size: 13px;
